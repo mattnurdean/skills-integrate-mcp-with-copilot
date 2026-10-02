@@ -6,6 +6,7 @@ A super simple FastAPI application that allows students to view and sign up for 
 
 - View all available extracurricular activities
 - Sign up for activities
+- Teacher login for signing up and unregistering students
 
 ## Getting Started
 
@@ -48,3 +49,9 @@ The application uses a simple data model with meaningful identifiers:
    - Grade level
 
 All data is stored in memory, which means data will be reset when the server restarts.
+
+## Teacher access
+
+Activity viewing is public. Teacher authentication is required for signup and unregister operations.
+Teacher credentials are stored as SHA-256 password hashes in `teachers.json`. The included local
+account is `teacher` with password `change-me`; replace it before deploying the application.
